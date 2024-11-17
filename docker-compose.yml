@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  php:
+    image: php:8.1-apache
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: bbs_yt
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d

@@ -9,7 +9,7 @@ $error_message = array();
 
 //DB接続
 try {
-    $pdo = new PDO('mysql:host=localhost;dbname=bbs-yt', "root");
+    $pdo = new PDO('mysql:host=localhost;dbname=bbs-yt', "root", "root");
 } catch (PDOException $e) {
     echo $e->getMessage();
 }

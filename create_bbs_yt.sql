@@ -1,0 +1,9 @@
+CREATE DATABASE IF NOT EXISTS bbs_yt;
+USE bbs_yt;
+
+CREATE TABLE IF NOT EXISTS `bbs-table` (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    comment TEXT NOT NULL,
+    postDate DATETIME NOT NULL
+);
